@@ -1,4 +1,5 @@
 import 'tailwindcss/tailwind.css'
+import "../components/Header-home";
 
 function MyApp({ Component, pageProps }) {
   return <Component {...pageProps} />
