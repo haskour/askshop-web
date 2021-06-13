@@ -5,12 +5,46 @@ export default function Menus(req, res) {
     {
       id: 1,
       name: "Mobile",
-      to: "/mobile",
+      to: "/",
+      subMenu: [
+        {
+          id: 2,
+          name: "Mobile category 1",
+          to: "/",
+        },
+        {
+          id: 3,
+          name: "Mobile category 2",
+          to: "/",
+        },
+        {
+          id: 4,
+          name: "Mobile category 3",
+          to: "/",
+        },
+      ],
     },
     {
       id: 2,
       name: "TV & AV",
       to: "/mobile",
+      subMenu: [
+        {
+          id: 2,
+          name: "TV & AV category 1",
+          to: "/",
+        },
+        {
+          id: 3,
+          name: "TV & AV category 2",
+          to: "/",
+        },
+        {
+          id: 4,
+          name: "TV & AV category 3",
+          to: "/",
+        },
+      ],
     },
     {
       id: 3,
@@ -26,6 +60,23 @@ export default function Menus(req, res) {
       id: 5,
       name: "Displays",
       to: "/mobile",
+      subMenu: [
+        {
+          id: 2,
+          name: "Displays category 1",
+          to: "/",
+        },
+        {
+          id: 3,
+          name: "Displays category 2",
+          to: "/",
+        },
+        {
+          id: 4,
+          name: "Displays category 3",
+          to: "/",
+        },
+      ],
     },
     {
       id: 6,

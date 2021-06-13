@@ -1,5 +1,5 @@
 import Head from "next/head";
-import HeaderHome from "../components/Header-home";
+import HeaderHome from "../components/Header-home/Header-home";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 export default function Home() {

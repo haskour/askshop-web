@@ -1,12 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import MegaMenuItem from "../MegaMenuItem/MegaMenuItem";
 export default function HeaderHome(props) {
   const [isMenuOpened, toggleMenu] = useState(false);
 
   return (
-    <header className="border-default-b border-gray-500">
-      <div className="max-w-screen-xl py-6 w-full mx-auto">
+    <header className="border-b border-gray-200">
+      <div className="max-w-screen-xl py-6 xl:py-0 w-full mx-auto">
         <div className="flex px-6 items-center">
           <a
             href="javascript:void(0);"
@@ -19,11 +20,7 @@ export default function HeaderHome(props) {
           <ul className="hidden xl:flex ml-12">
             {props.items.map((item) => (
               <li className="mx-3" key={item.id}>
-                <Link href={item.to}>
-                  <a className="tracking-wider inline-block my-3 text-black font-light text-sm">
-                    {item.name}
-                  </a>
-                </Link>
+                <MegaMenuItem item={item} />
               </li>
             ))}
           </ul>
