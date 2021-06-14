@@ -14,7 +14,7 @@ export default function MegaMenuItem(props) {
     >
       <Link href={props.item.to}>
         <a className="tracking-wider inline-flex items-center py-9 text-black font-light text-sm">
-          <span>{props.item.name}</span>
+          <span className="font-medium">{props.item.name}</span>
 
           {props.item.subMenu ? (
             <span className="inline-flex items-center ml-3">
@@ -33,22 +33,45 @@ export default function MegaMenuItem(props) {
 
       {props.item.subMenu ? (
         <div
-          className={`absolute p-6 bg-white shadow-lg left-0 transition-all duration-400 ease-in transform ${
+          className={`absolute p-6 bg-white border-l-5 border-black shadow-lg left-0 transition-all duration-400 ease-in transform ${
             isMenuOpened ? "opacity-100" : "opacity-0"
           }`}
-          style={{ minWidth: 200 }}
+          style={{ minWidth: 400 }}
         >
-          <ul>
-            {props.item.subMenu.map((item, key) => (
-              <li key={key}>
-                <Link href={props.item.to}>
-                  <a className="tracking-wider inline-block my-3 text-black font-light text-sm">
-                    {item.name}
-                  </a>
-                </Link>
-              </li>
-            ))}
-          </ul>
+          <div className="flex">
+            <div className="w-1/2">
+              <span className="uppercase text-xs text-gray-400 inline-block mb-2 font-medium">
+                category
+              </span>
+              <ul>
+                {props.item.subMenu.map((item, key) => (
+                  <li key={key}>
+                    <Link href={props.item.to}>
+                      <a className="tracking-wider inline-block my-2 text-black font-medium text-sm">
+                        {item.name}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="w-1/2">
+              <span className="uppercase text-xs text-gray-400 inline-block mb-2 font-medium">
+                test category
+              </span>
+              <ul>
+                {props.item.subMenu.map((item, key) => (
+                  <li key={key}>
+                    <Link href={props.item.to}>
+                      <a className="tracking-wider inline-block my-2 text-black font-medium text-sm">
+                        {item.name}
+                      </a>
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       ) : (
         <></>
